@@ -1,0 +1,89 @@
+
+<div class="col-lg-7">
+    <div class="form-group row">
+        <label class="col-sm-3 form-control-label">
+            Company Name <span class="required-field">*</span>
+        </label>
+        <div class="col-sm-9">
+            <input type="hidden" 
+                   ng-model="company.id" /> 
+            <input type="text" 
+                   class="form-control"
+                   ng-model="company.name" />
+            <div class="text-right">
+                <span ng-show="errors.name" class="ng-hide validation-error">{{errors.name}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 form-control-label">
+            Address <span class="required-field">*</span>
+        </label>
+        <div class="col-sm-9">                
+            <textarea class="form-control"
+                      ng-model="company.address" >
+            </textarea>
+            <div class="text-right">
+                <span ng-show="errors.address" class="ng-hide validation-error">{{errors.address}}</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 form-control-label">
+            Country <span class="required-field">*</span>
+        </label>
+        <div class="col-sm-9">
+            <input type="text" 
+                   class="form-control"
+                   ng-model="company.country" />
+            <div class="text-right">
+                <span ng-show="errors.country" class="ng-hide validation-error">{{errors.country}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 form-control-label">
+            City <span class="required-field">*</span>
+        </label>
+        <div class="col-sm-9">
+            <input type="text" 
+                   class="form-control"
+                   ng-model="company.city" />
+            <div class="text-right">
+                <span ng-show="errors.city" class="ng-hide validation-error">{{errors.city}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 form-control-label">
+            Email
+        </label>
+        <div class="col-sm-9">
+            <input type="email" 
+                   class="form-control"
+                   ng-model="company.email" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 form-control-label">
+            Phone No
+        </label>
+        <div class="col-sm-9">
+            <input type="text" 
+                   class="form-control"
+                   ng-model="company.phone" />
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group row">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button type="button" class="btn btn-secondary" ng-click="create()">
+                {{company.id ? 'Update' : 'Create'}}
+            </button>
+            <a href="/ui#/">
+                <button class="btn btn-primary">Back</button>
+            </a>
+        </div>
+    </div>
+</div>
